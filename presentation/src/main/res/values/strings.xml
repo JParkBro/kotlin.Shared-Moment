@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="home">Home</string>
+    <string name="calendar">Calendar</string>
+    <string name="settings">Settings</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">홈</string>
+    <string name="calendar">캘린더</string>
+    <string name="settings">설정</string>
+</resources>

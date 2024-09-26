@@ -7,40 +7,40 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import jpark.bro.presentation.ui.navigation.AppNavHost
+import jpark.bro.presentation.ui.navigation.BottomNavigationBar
+import jpark.bro.presentation.ui.navigation.NavItem
+import jpark.bro.presentation.ui.theme.SharedMomentsTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            jpark.bro.presentation.ui.theme.SharedMomentsTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+            SharedMomentsTheme {
+                val navController = rememberNavController()
+
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    bottomBar = {
+                        BottomNavigationBar(
+                            navController = navController,
+                            items = listOf(
+                                NavItem.Home,
+                                NavItem.Calendar,
+                                NavItem.Settings,
+                            )
+                        )
+                    }
+                ) { innerPadding ->
+                    AppNavHost(
+                        navController = navController,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    jpark.bro.presentation.ui.theme.SharedMomentsTheme {
-        Greeting("Android")
     }
 }
