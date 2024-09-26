@@ -63,8 +63,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
 }
 
 kapt {
