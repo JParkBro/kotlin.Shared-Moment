@@ -1,0 +1,53 @@
+# Gradle 관련 파일
+.gradle
+/build
+!gradle/wrapper/gradle-wrapper.jar
+local.properties
+
+# Android Studio 관련 파일
+/.idea
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/misc.xml
+/.idea/dictionaries
+
+# Log 파일
+*.log
+
+# Android Lint 결과
+lint/reports/
+lint/results/
+
+# Keystore 파일 (보안상 중요한 항목)
+*.keystore
+*.jks
+
+# 빌드 결과물
+*.apk
+*.ap_
+*.aab
+
+# Proguard 파일
+proguard/proguard.txt
+proguard/*.pro
+
+# Kotlin 관련
+*.kotlin_metadata/
+*.kotlin_builtins/
+
+# 일반적인 MacOS, Windows 파일
+.DS_Store
+Thumbs.db
+
+# 기타 개인 설정 파일
+*.iml
+*.hprof
+.vscode/
+
+/captures
+.externalNativeBuild
+.cxx
