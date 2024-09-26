@@ -1,4 +1,4 @@
-package jpark.bro.sharedmoments
+package jpark.bro.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,14 +11,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import jpark.bro.sharedmoments.ui.theme.SharedMomentsTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            SharedMomentsTheme {
+            jpark.bro.presentation.ui.theme.SharedMomentsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
@@ -41,7 +40,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    SharedMomentsTheme {
+    jpark.bro.presentation.ui.theme.SharedMomentsTheme {
         Greeting("Android")
     }
 }

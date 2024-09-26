@@ -1,4 +1,4 @@
-package jpark.bro.sharedmoments.ui.theme
+package jpark.bro.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package jpark.bro.sharedmoments.ui.theme
+package jpark.bro.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
